@@ -1,0 +1,21 @@
+.schedule{
+    border-radius:12px;
+    width: 250px;
+}
+
+/* large mobile phone */
+@media (min-width:350px) {
+    .schedule {
+        width: 75vw;
+        max-width: 400px;
+    }
+}
+
+/* tablet or computer */
+@media (min-width: 768px) {
+    .schedule {
+        width: 40vw;
+        min-width: 400px;
+        max-width: 600px;
+    }
+}

@@ -1,0 +1,13 @@
+.banner{
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 250px;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* @media (min-width: 768px) {
+    .banner{
+        height: 200px;
+    }
+} */

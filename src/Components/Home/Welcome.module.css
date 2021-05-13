@@ -1,0 +1,27 @@
+.welcome, .lotus{
+    height: 75px;
+}
+
+.lotus {
+    display: none;
+}
+
+.photo {
+    border-radius: 12px;
+    width: 250px;
+}
+
+/* large mobile phones */
+@media (min-width: 450px) {
+    .lotus{
+        display: inline;
+    }
+}
+
+/* tablet or computer */
+@media (min-width: 768px) {
+    .photo {
+        width: 30vw;
+        max-width: 400px;
+    }
+}

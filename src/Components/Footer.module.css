@@ -1,0 +1,15 @@
+.logo{
+    width: 50px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* tablet or computer */
+@media (min-width: 768px) {
+    .logo{
+        width: 100px;
+    }
+}

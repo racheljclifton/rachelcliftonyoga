@@ -1,0 +1,32 @@
+.playerCard{
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player {
+    width: 250px;
+    height: 380px;
+}
+
+.selected {
+    color: #008080;
+    border-color: #008080;
+}
+
+/* large mobile phone */
+@media (min-width:350px) {
+    .player {
+        width: 75vw;
+        max-width: 300px;
+    }
+}
+
+/* tablet or computer */
+@media (min-width: 768px) {
+    .player {
+        width: 40vw;
+        min-width: 300px;
+        max-width: 400px;
+    }
+}

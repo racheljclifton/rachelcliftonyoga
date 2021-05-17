@@ -30,9 +30,7 @@ const Specialty = (props) => {
         <Button onClick={showDetailsHandler}>More Details</Button>
       )}
       {isShowingDetails === true && (
-        <Modal title={props.specialty.title} onConfirm={hideDetailsHandler} >
-          {modalMessage}
-          </Modal>
+        <Modal title={props.specialty.title} onConfirm={hideDetailsHandler} message={modalMessage} />
 
       )}
     </Card>

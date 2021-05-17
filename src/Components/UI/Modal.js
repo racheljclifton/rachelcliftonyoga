@@ -16,7 +16,7 @@ const ModalOverlay = (props) => {
         <h2>{props.title}</h2>
       </header>}
       <div className={classes.content}>
-        {props.message}
+        {props.children}
       </div>
       <footer className={classes.actions}>
         <Button onClick={props.onConfirm}>Close</Button>

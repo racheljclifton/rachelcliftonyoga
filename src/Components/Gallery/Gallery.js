@@ -4,6 +4,7 @@ import styles from "./Gallery.module.css";
 
 // import Modal from "../UI/Modal";
 
+let initialListOfImages = [];
 let listOfImages = [];
 
 const Gallery = () => {
@@ -14,9 +15,11 @@ const Gallery = () => {
     return r.keys().map(r);
   };
 
-  listOfImages = importAll(
+  initialListOfImages = importAll(
     require.context("../../Images/Yoga/", false, /\.(png|jpe?g|svg)$/)
   );
+
+  listOfImages = initialListOfImages.reverse();
 
   const showPictureHandler = (event) => {
     // setIsShowingPicture(true);

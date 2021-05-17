@@ -1,29 +1,37 @@
-.gallery{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.picture{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 5px;
+.picture {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 5px;
 }
 
 .picture:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .picture.selected {
-    box-sizing: border-box;
-    position: fixed;
-    top: 10vh;
-    left: 10vw;
-    height: 80vh;
-    width: 80vw;
-    z-index: 100;
-    overflow: hidden;
-    margin: 0;
-    object-fit: contain;
+  box-sizing: border-box;
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  height: 80vh;
+  width: 80vw;
+  z-index: 100;
+  overflow: hidden;
+  margin: 0;
+  object-fit: contain;
+}
+
+/* tablet and computer */
+@media (min-width: 768px) {
+  .picture {
+    width: 200px;
+    height: 200px;
+  }
 }

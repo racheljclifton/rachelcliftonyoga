@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Navigation.module.css';
+// import styles from './Navigation.module.css';
 import Button from './UI/Button';
 
 const Navigation = (props) => {

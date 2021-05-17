@@ -11,7 +11,7 @@
 .modal {
   box-sizing: border-box;
   position: fixed;
-  top: 30vh;
+  top: 20vh;
   left: 10vw;
   width: 80vw;
   z-index: 100;

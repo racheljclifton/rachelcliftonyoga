@@ -4,6 +4,7 @@ import styles from './Specialty.module.css'
 
 import Card from "../UI/Card";
 import Modal from '../UI/Modal';
+import Button from '../UI/Button';
 
 const Specialty = (props) => {
   const [isShowingDetails, setIsShowingDetails] = useState(false);
@@ -26,7 +27,7 @@ const Specialty = (props) => {
       <h2>{props.specialty.title}</h2>
       <p>{props.specialty.description}</p>
       {props.specialty.details !== "" && isShowingDetails === false && (
-        <button onClick={showDetailsHandler}>More Details</button>
+        <Button onClick={showDetailsHandler}>More Details</Button>
       )}
       {isShowingDetails === true && (
         <Modal title={props.specialty.title} message={modalMessage} onConfirm={hideDetailsHandler} />

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from './Music.module.css';
 
 import Card from "../UI/Card";
+import Button from '../UI/Button';
 
 const Music = () => {
   const [player, setPlayer] = useState("favorites");
@@ -36,18 +37,18 @@ const Music = () => {
     <React.Fragment>
       <h2>Enjoyed the music during class?</h2>
       <h3>Check out my Spotify playlists:</h3>
-      <button value="favorites" onClick={playerHandler} className={player === 'favorites' && styles.selected}>
+      <Button value="favorites" onClick={playerHandler} className={player === 'favorites' && 'selected'}>
         Rachel's Favorites
-      </button>
-      <button value="namaste" onClick={playerHandler} className={player === 'namaste' && styles.selected}>
+      </Button>
+      <Button value="namaste" onClick={playerHandler} className={player === 'namaste' && 'selected'}>
         Namaste Playlist (Aerial & Roots)
-      </button>
-      <button value="shanti" onClick={playerHandler} className={player === 'shanti' && styles.selected}>
+      </Button>
+      <Button value="shanti" onClick={playerHandler} className={player === 'shanti' && 'selected'}>
         Shanti Playlist (Gentle & Yin)
-      </button>
-      <button value="stress" onClick={playerHandler} className={player === 'stress' && styles.selected}>
+      </Button>
+      <Button value="stress" onClick={playerHandler} className={player === 'stress' && 'selected'}>
         Yoga for Stress Playlist
-      </button>
+      </Button>
 
         <Card className={styles.playerCard}>
           <iframe

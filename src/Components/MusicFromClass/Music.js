@@ -33,7 +33,7 @@ const Music = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <h2>Enjoyed the music during class?</h2>
       <h3>Check out my Spotify playlists:</h3>
       <button value="favorites" onClick={playerHandler} className={player === 'favorites' && styles.selected}>
@@ -59,7 +59,7 @@ const Music = () => {
             allow="encrypted-media"
           ></iframe>
         </Card>
-    </div>
+    </React.Fragment>
   );
 };
 

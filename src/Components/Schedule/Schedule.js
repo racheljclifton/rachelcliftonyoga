@@ -9,7 +9,7 @@ const Schedule = () => {
   const honorYogaLink =
     "https://www.honoryoga.com/harperspoint/classes/#schedule";
   return (
-    <div>
+    <React.Fragment>
       <img
         className={styles.schedule}
         src={scheduleImage}
@@ -22,7 +22,7 @@ const Schedule = () => {
         </a>{" "}
         for more details and to book your class!
       </p>
-    </div>
+    </React.Fragment>
   );
 };
 

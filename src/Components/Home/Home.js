@@ -5,10 +5,10 @@ import Specialties from './Specialties';
 
 const Home = () => {
     return (
-        <div>
+        <React.Fragment>
             <Welcome />
             <Specialties />
-        </div>
+        </React.Fragment>
     )
 }
 

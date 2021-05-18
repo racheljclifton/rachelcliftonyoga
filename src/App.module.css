@@ -1,7 +1,7 @@
 .App {
   background-image: url(./Images/background.jpeg);
   text-align: center;
-  min-height: 100vh;
+  min-height: 96vh;
   padding: 2vh;
 }
 .mainCard {
@@ -17,7 +17,7 @@
     "Main"
     "Footer";
   gap: 10px;
-  min-height: 96vh;
+  min-height: calc(96vh - 40px);
 }
 
 .Header {
@@ -38,6 +38,7 @@
   align-self: end;
 }
 
+/*tablets and computers */
 @media (min-width: 768px) {
   .Layout {
     grid-template-rows: 200px auto 1fr 100px;

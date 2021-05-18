@@ -1,5 +1,9 @@
+.specialtyCard {
+    height: calc(100% - 60px);
+}
+
 /* phones and regular tablets */
-@media (max-width: 1024px){
+@media (max-width: 1023px){
     .specialtyCard{
         margin-left: auto;
         margin-right: auto;

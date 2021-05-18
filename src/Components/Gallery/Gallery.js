@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import styles from "./Gallery.module.css";
 
-// import Modal from "../UI/Modal";
+import Modal from "../UI/Modal";
 
 let initialListOfImages = [];
 let listOfImages = [];
 
 const Gallery = () => {
-//   const [isShowingPicture, setIsShowingPicture] = useState(false);
-  const [modalImageSrc, setModalImageSrc] = useState('');
+  const [isShowingPicture, setIsShowingPicture] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
 
   const importAll = (r) => {
     return r.keys().map(r);
@@ -22,40 +22,54 @@ const Gallery = () => {
   listOfImages = initialListOfImages.reverse();
 
   const showPictureHandler = (event) => {
-    // setIsShowingPicture(true);
+    setIsShowingPicture(true);
     setModalImageSrc(event.target.currentSrc);
   };
 
   const hidePictureHandler = (event) => {
-    // setIsShowingPicture(false);
-    setModalImageSrc('');
+    setIsShowingPicture(false);
+    setModalImageSrc("");
   };
+
+  const caption = (fileName) => {
+    return fileName.match(/(?<=\/)(?!.*\/)[^\/]*?(?=\.)/)[0];
+  };
+
+  const img = (image, index) => {
+    return (
+      <img
+        key={index}
+        onClick={showPictureHandler}
+        value={image.default}
+        src={image.default}
+        alt={caption(image.default)}
+        className={styles.picture}
+      />
+    );
+  };
+
+  // const message =
 
   return (
     <>
       <header>
-        <h1>Rachel's Yoga Adventures
-        </h1>
+        <h1>Rachel's Yoga Adventures</h1>
       </header>
       <div className={styles.gallery}>
-        {listOfImages.map((image, index) => (
-          <img
-            key={index}
-            onClick={modalImageSrc.includes(image.default) ? hidePictureHandler : showPictureHandler}
-            value={image.default}
-            src={image.default}
-            alt="Rachel doing yoga"
-            className={`${styles.picture} ${modalImageSrc.includes(image.default) && styles.selected}`}
-          />
-        ))}
+        {listOfImages.map((image, index) => img(image, index))}
       </div>
-      {/* {isShowingPicture === true && (
-        <Modal onConfirm={hidePictureHandler} title="Rachel doing yoga">
-          <div>
-            <img src={modalImageSrc} alt="Rachel doing yoga" />
-          </div>
-        </Modal>
-      )} */}
+      {isShowingPicture === true && (
+        <Modal
+          onConfirm={hidePictureHandler}
+          message={
+            <img
+              src={modalImageSrc}
+              alt={caption(modalImageSrc)}
+              className={styles.selected}
+            />
+          }
+        />
+      )}
     </>
   );
 };

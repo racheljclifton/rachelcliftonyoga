@@ -11,11 +11,12 @@
 .modal {
   box-sizing: border-box;
   position: fixed;
-  top: 20vh;
+  top: 10vh;
   left: 10vw;
   width: 80vw;
+  max-height: 80vh;
   z-index: 100;
-  overflow: hidden;
+  overflow: scroll;
   margin: 0;
 }
 
@@ -38,11 +39,20 @@
   display: flex;
   justify-content: flex-end;
 }
+/* tablet */
+@media (min-width: 768px){
+  .modal {
+    left: 20vw;
+    width: 60vw;
 
-/* tablet and computer */
-@media (min-width: 768px) {
+  }
+}
+/* computer */
+@media (min-width: 1025px) {
   .modal {
     left: 25vw;
     width: 50vw;
+    top: 5vh;
+    max-height: 90vh;
   }
 }

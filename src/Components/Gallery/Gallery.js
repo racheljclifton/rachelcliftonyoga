@@ -23,8 +23,7 @@ const Gallery = () => {
   listOfImages = initialListOfImages.reverse();
 
   const caption = (fileName) => {
-    // eslint-disable-next-line
-    return fileName.match(/(?<=\/)(?!.*\/)[^\/]*?(?=\.)/)[0];
+    return fileName.match(/(?<=\/)(?!.*\/)[^/]*?(?=\.)/)[0];
   };
 
   const showPictureHandler = (event) => {

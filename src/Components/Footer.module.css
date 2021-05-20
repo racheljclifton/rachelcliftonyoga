@@ -9,7 +9,7 @@
 
 /* tablet or computer */
 @media (min-width: 768px) {
-    .logo{
-        width: 100px;
+    .footer {
+        display: none;
     }
 }

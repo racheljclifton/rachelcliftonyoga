@@ -1,12 +1,19 @@
 .specialtyCard {
-    height: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
 }
 
 /* phones and regular tablets */
-@media (max-width: 1023px){
+@media (min-width: 1024px){
     .specialtyCard{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 600px;
+        /* making all cards same height, have to subtract padding and margin */
+        height: calc(100% - 50px);
+        margin: 10px;
+        padding: 15px;
+    }
+    .title{
+        margin-bottom: .6em;
+        margin-top: 0;
     }
 }

@@ -23,7 +23,8 @@ const Gallery = () => {
   listOfImages = initialListOfImages.reverse();
 
   const caption = (fileName) => {
-    return fileName.match(/(?:\/)(?!.*\/)[^.]*/)[0];
+    return /(?:\/|^)(?!.*\/)([^.]*)/.exec(fileName)[1]
+    // return fileName.match(/(?:\/)(?!.*\/)[^.]*/)[0];
   };
 
   const showPictureHandler = (event) => {

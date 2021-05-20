@@ -4,7 +4,6 @@ import React, {useState} from "react";
 import styles from "./App.module.css";
 
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import Navigation from "./Components/Navigation";
 import Card from "./Components/UI/Card";
 
@@ -33,7 +32,6 @@ function App() {
           {display ==='gallery' && <Gallery />}
           {display === 'cards' && <AffirmationDeck />}
         </div>
-        <Footer className={styles.Footer} />
         </div>
       </Card>
 

@@ -24,7 +24,7 @@ const Specialty = (props) => {
 
   return (
     <Card className={styles.specialtyCard}>
-      <h2>{props.specialty.title}</h2>
+      <h2 className={styles.title}>{props.specialty.title}</h2>
       <p>{props.specialty.description}</p>
       {props.specialty.details !== "" && (
         <Button onClick={showDetailsHandler}>More Details</Button>

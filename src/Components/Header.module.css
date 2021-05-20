@@ -6,8 +6,9 @@
     border-radius: 12px;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .banner{
-        height: 200px;
+        width: 750px;
+        object-fit: cover;
     }
-} */
+}

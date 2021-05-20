@@ -1,21 +1,25 @@
 .App {
   background-image: url(./Images/background.jpeg);
   text-align: center;
-  min-height: 96vh;
-  padding: 2vh;
+  min-height: 100vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
 }
 .mainCard {
   height: fit-content;
   min-width: 270px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  padding: 10px !important;
 }
 .Layout {
   display: grid;
-  grid-template-rows: 100px auto 1fr 50px;
+  grid-template-rows: 100px auto 1fr;
   grid-template-areas:
     "Header"
     "Navigation"
-    "Main"
-    "Footer";
+    "Main";
   gap: 10px;
   min-height: calc(96vh - 40px);
 }
@@ -33,15 +37,14 @@
   grid-area: Main;
 }
 
-.Footer {
-  grid-area: Footer;
-  align-self: end;
-}
-
 /*tablets and computers */
 @media (min-width: 768px) {
   .Layout {
-    grid-template-rows: 200px auto 1fr 100px;
+    grid-template-rows: 125px auto 1fr;
+    grid-template-areas:
+    "Header"
+    "Navigation"
+    "Main";
   }
 }
 

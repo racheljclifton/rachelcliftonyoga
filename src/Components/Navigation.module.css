@@ -1,4 +1,13 @@
-.selected {
-    color: #008080;
-    border-color: #008080;
+.socialLink {
+    display: inline-block;
+    height: 28px;
+    margin: 5px;
+    align: center;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }

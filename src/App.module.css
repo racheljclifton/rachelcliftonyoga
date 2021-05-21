@@ -1,37 +1,53 @@
 .App {
-  background-image: url(./Images/background.jpeg);
+
   text-align: center;
   min-height: 100vh;
-  padding-left: 2vh;
-  padding-right: 2vh;
+  /* background-image: url(./Images/grass-background.png); */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
+  background: url(./Images/grass-background.png) no-repeat fixed center;
+  background-size: cover;
+  
+
 }
 .mainCard {
-  height: fit-content;
-  min-width: 270px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-  padding: 10px !important;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  padding-bottom: 10px;
+  padding-top: 0;
+  background-color:rgba(255, 255, 255, 0.178);
 }
 .Layout {
   display: grid;
-  grid-template-rows: 100px auto 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "Header"
-    "Navigation"
     "Main";
   gap: 10px;
-  min-height: calc(96vh - 40px);
+  /* min-height: calc(96vh - 40px); */
 }
 
 .Header {
   grid-area: Header;
   align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+  "Banner"
+  "Nav";
+  justify-content: center;
 }
 
-.Navigation {
-  grid-area: Navigation;
+.Banner {
+  grid-area: Banner;
 }
+
+.Nav {
+  grid-area: Nav;
+}
+
 
 .Main {
   grid-area: Main;
@@ -40,11 +56,13 @@
 /*tablets and computers */
 @media (min-width: 768px) {
   .Layout {
-    grid-template-rows: 125px auto 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
     "Header"
-    "Navigation"
     "Main";
+  }
+  .Header {
+    grid-template-rows: 80px 1fr;
   }
 }
 

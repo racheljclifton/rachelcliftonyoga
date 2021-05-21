@@ -1,15 +1,15 @@
 import React from "react";
 
-import welcomeImage from "../../Images/Welcome.png";
-import lotus from "../../Images/lotus_teal.png";
-import brandImage from "../../Images/brand_image.jpeg";
+// import welcomeImage from "../../Images/Welcome.png";
+// import lotus from "../../Images/lotus_teal.png";
+import brandImage from "../../Images/branding_image.jpeg";
 
 import styles from "./Welcome.module.css";
 
 const Welcome = () => {
   return (
     <React.Fragment>
-      <div>
+      {/* <div>
         <img
           className={styles.lotus}
           src={lotus}
@@ -21,7 +21,7 @@ const Welcome = () => {
           src={lotus}
           alt="Teal lotus flower graphic"
         />
-      </div>
+      </div> */}
       <img
         className={styles.photo}
         src={brandImage}

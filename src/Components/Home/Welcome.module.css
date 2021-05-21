@@ -1,22 +1,25 @@
-.welcome, .lotus{
+/* .welcome, .lotus{
     height: 75px;
 }
 
 .lotus {
     display: none;
-}
+} */
 
 .photo {
-    border-radius: 12px;
+    border-radius: 50%;
     width: 250px;
+    border: solid 5px rgba(255, 255, 255, 0.589);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+
 }
 
 /* large mobile phones */
-@media (min-width: 450px) {
+/* @media (min-width: 450px) {
     .lotus{
         display: inline;
     }
-}
+} */
 
 /* tablet or computer */
 @media (min-width: 768px) {

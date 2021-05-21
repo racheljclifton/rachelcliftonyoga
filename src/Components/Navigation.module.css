@@ -2,7 +2,6 @@
     display: inline-block;
     height: 28px;
     margin: 5px;
-    align: center;
 }
 
 .navBar {
@@ -10,4 +9,24 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    /* position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%); */
+    width: 90%;
+    min-width: 320px;
+    justify-self: center;
 }
+
+/*tablets and computers */
+/* @media (min-width: 768px) {
+    .navBar{
+        top: 80px;
+    }
+} */
+/* tiny phones */
+/* @media (max-width: 320px) {
+    .navBar{
+        left: 160px;
+    }
+} */

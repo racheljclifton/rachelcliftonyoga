@@ -1,10 +1,28 @@
-/* large table & computer */
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item{
+    width: 90%
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    .item{
+        width: 80%;
+    }
+}
+
+
+/* large tablet & computer */
 @media (min-width: 1024px){
     .list{
-        display: flex;
+        flex-direction: row;
+        align-items: stretch;
     }
-
     .item{
         flex-basis: 50%;
+        width: auto;
     }
 }

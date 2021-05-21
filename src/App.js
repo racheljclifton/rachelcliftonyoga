@@ -1,40 +1,44 @@
 // import logo from './logo.svg';
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import styles from "./App.module.css";
 
 import Header from "./Components/Header";
 import Navigation from "./Components/Navigation";
-import Card from "./Components/UI/Card";
 
-import Home from './Components/Home/Home';
-import Schedule from './Components/Schedule/Schedule';
-import Music from './Components/MusicFromClass/Music';
-import Gallery from './Components/Gallery/Gallery';
-import AffirmationDeck from './Components/AffirmationDeck/AffirmationDeck';
+import Home from "./Components/Home/Home";
+import Schedule from "./Components/Schedule/Schedule";
+import Music from "./Components/MusicFromClass/Music";
+import Gallery from "./Components/Gallery/Gallery";
+import AffirmationDeck from "./Components/AffirmationDeck/AffirmationDeck";
 
 function App() {
-  const [display, setDisplay] = useState('home')
+  const [display, setDisplay] = useState("home");
 
   const displayHandler = (selectedDisplay) => {
     setDisplay(selectedDisplay);
-  }
+  };
   return (
     <div className={styles.App}>
-      <Card className={styles.mainCard}>
+      <div className={styles.mainCard}>
         <div className={styles.Layout}>
-        <Header className={styles.Header} />
-        <Navigation className={styles.Navigation} onDisplaySelection={displayHandler} selectedDisplay={display}/>
-        <div className={styles.Main}>
-          {display === 'home' && <Home />}
-          {display === 'schedule' && <Schedule />}
-          {display === 'music' && <Music />}
-          {display ==='gallery' && <Gallery />}
-          {display === 'cards' && <AffirmationDeck />}
+          <header className={styles.Header}>
+            <Header className={styles.Banner} />
+            <Navigation
+              className={styles.Nav}
+              onDisplaySelection={displayHandler}
+              selectedDisplay={display}
+            />
+          </header>
+          <main className={styles.Main}>
+            {display === "home" && <Home />}
+            {display === "schedule" && <Schedule />}
+            {display === "music" && <Music />}
+            {display === "gallery" && <Gallery />}
+            {display === "cards" && <AffirmationDeck />}
+          </main>
         </div>
-        </div>
-      </Card>
-
+      </div>
     </div>
   );
 }

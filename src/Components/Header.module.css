@@ -1,14 +1,25 @@
 .banner{
-    object-fit: cover;
+    /* object-fit: cover; */
     max-width: 100%;
-    min-width: 250px;
-    height: 100%;
-    border-radius: 12px;
+    min-width: 320px;
+    height: 100px;
+    justify-self: center;
+    /* position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%); */
 }
 
+/*tablets and computers */
 @media (min-width: 768px) {
-    .banner{
-        width: 750px;
-        object-fit: cover;
+    .banner {
+      height: 150px;
     }
 }
+
+/* tiny phones */
+/* @media (max-width: 320px) {
+    .banner{
+        left: 160px;
+    }
+} */

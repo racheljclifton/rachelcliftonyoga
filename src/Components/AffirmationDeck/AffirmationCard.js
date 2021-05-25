@@ -22,7 +22,7 @@ const AffirmationDeckCard = (props) => {
 
   return (
     <>
-      <Card>
+      <Card className={styles.affirmationCard}>
         <h2 className={styles.title}>{title}</h2>
         <p>{card.affirmation}</p>
         <h3>{card.mantra}</h3>

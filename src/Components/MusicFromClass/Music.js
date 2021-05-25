@@ -30,7 +30,6 @@ const Music = () => {
 
   const playerHandler = (event) => {
     setPlayer(event.target.value);
-    console.log(player);
   };
 
   return (

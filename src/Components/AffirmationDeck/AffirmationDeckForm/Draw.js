@@ -33,15 +33,15 @@ const Draw = (props) => {
             name="drawPlace"
             value="top"
           />
-          <label for="top">Top of the Deck</label>
+          <label htmlFor="top">Top of the Deck</label>
         </div>
         <div>
           <input type="radio" id="bottom" name="drawPlace" value="bottom" />
-          <label for="bottom">Bottom of the Deck</label>
+          <label htmlFor="bottom">Bottom of the Deck</label>
         </div>
         <div>
           <input type="radio" id="random" name="drawPlace" value="random" />
-          <label for="random">Randomly from the Deck</label>
+          <label htmlFor="random">Randomly from the Deck</label>
         </div>
       </div>
       <Button type="submit">Draw Your Card</Button>

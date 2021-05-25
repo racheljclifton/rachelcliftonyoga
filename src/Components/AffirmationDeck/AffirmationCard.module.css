@@ -1,6 +1,15 @@
 .title {
-    font-family: 'Sacramento', cursive;
-    font-size: 2.7em;
-    margin-top: 10px;
-    margin-bottom: 0;
+  font-family: "Sacramento", cursive;
+  font-size: 2.7em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* screen wider than arbitrary max-width of 500px with 10px margin on each side */
+@media (min-width: 520px) {
+  .affirmationCard {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

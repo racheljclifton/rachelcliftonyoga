@@ -4,11 +4,9 @@ import AffirmationDeckForm from "./AffirmationDeckForm/AffirmationDeckForm";
 import DeckContext from '../../store/deck-context';
 
 const AffirmationDeck = () => {
-  // const [deck, setDeck] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [display, setDisplay] = useState("form");
-  // const [selectedCard, setSelectedCard] = useState({});
 
   const ctx = useContext(DeckContext);
   const onCreate = ctx.onCreate;
@@ -44,12 +42,8 @@ const AffirmationDeck = () => {
     setIsLoading(false);
   }, [onCreate]);
 
-  useEffect(() => fetchDeck(), [fetchDeck]);
-
-  // const onDraw = {
-  //   setDisplay,
-  //   setSelectedCard,
-  // };
+  useEffect(() => {
+    if (display === 'form'){fetchDeck()}}, [fetchDeck, display]);
 
   let displayContent;
   if (display === "form") {

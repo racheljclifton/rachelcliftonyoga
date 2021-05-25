@@ -1,0 +1,17 @@
+
+
+label, form > p {
+    display: inline-block;
+    margin: 0 20px 5px 20px;
+}
+
+select, input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type = radio] {
+    display: inline;
+    margin: 5px;
+}

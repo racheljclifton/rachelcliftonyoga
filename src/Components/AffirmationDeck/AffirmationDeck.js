@@ -3,6 +3,9 @@ import AffirmationDeckCard from "./AffirmationCard";
 import AffirmationDeckForm from "./AffirmationDeckForm/AffirmationDeckForm";
 import DeckContext from '../../store/deck-context';
 
+import styles from './AffirmationDeck.module.css';
+import logo from '../../../src/logo.svg'; 
+
 const AffirmationDeck = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -66,7 +69,7 @@ const AffirmationDeck = () => {
     content = <p>{error}</p>;
   }
   if (isLoading) {
-    content = <p>Loading...</p>;
+    content = <><img className={styles.loading} src={logo} alt="Spinning lotus"/></>;
   }
 
   return (

@@ -1,0 +1,14 @@
+.loading {
+    animation: rotation 2s infinite linear;
+    width: 60vw;
+    max-width: 200px;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

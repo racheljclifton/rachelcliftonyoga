@@ -12,6 +12,8 @@ import Music from "./Components/MusicFromClass/Music";
 import Gallery from "./Components/Gallery/Gallery";
 import AffirmationDeck from "./Components/AffirmationDeck/AffirmationDeck";
 
+import { DeckContextProvider } from "./store/deck-context";
+
 function App() {
   const [display, setDisplay] = useState("home");
 
@@ -35,7 +37,11 @@ function App() {
             {display === "schedule" && <Schedule />}
             {display === "music" && <Music />}
             {display === "gallery" && <Gallery />}
-            {display === "cards" && <AffirmationDeck />}
+            {display === "cards" && (
+              <DeckContextProvider>
+                <AffirmationDeck />
+              </DeckContextProvider>
+            )}
           </main>
         </div>
       </div>

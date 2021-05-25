@@ -1,6 +1,7 @@
 # rachelciftonyoga
 
 Website created using React for my yoga LLC. 
-Right now there are four active pages: home, schedule, music, and photos.
+Right now there are four active pages: home, schedule, music, photos, and virtual affirmation deck.
 The CSS is currently not all set up, but my focus right now is understanding and using React - will make it all perfect later!
-Pages to add: virtual affirmation card deck (see other repository for the command-line version of this app written in Java)
+
+The Virtual Affirmation deck uses a firebase backend.

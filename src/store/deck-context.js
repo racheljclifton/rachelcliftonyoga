@@ -48,6 +48,10 @@ export const DeckContextProvider = (props) => {
     }
   };
 
+  const resetCardHandler = () => {
+    setSelectedCard({});
+  }
+
   return (
     <DeckContext.Provider
       value={{
@@ -57,6 +61,7 @@ export const DeckContextProvider = (props) => {
         onFilter: filterDeckHandler,
         onShuffle: shuffleDeckHandler,
         onSelect: selectCardHandler,
+        onReset: resetCardHandler,
       }}
     >
       {props.children}

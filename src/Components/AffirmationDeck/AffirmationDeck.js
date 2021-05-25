@@ -58,7 +58,7 @@ const AffirmationDeck = () => {
   if (display === "card") {
     displayContent = (
       <>
-        <AffirmationDeckCard />
+        <AffirmationDeckCard onBackToDeck={setDisplay} />
       </>
     );
   }

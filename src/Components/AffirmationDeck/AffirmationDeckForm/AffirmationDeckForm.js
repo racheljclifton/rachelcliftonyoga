@@ -17,7 +17,7 @@ const AffirmationDeckForm = (props) => {
         content = <Draw onDraw={props.onDraw}/>
     }
 
-    return <><p>Affirmation Deck Form</p>{content}</>
+    return <>{content}</>
 };
 
 export default AffirmationDeckForm;

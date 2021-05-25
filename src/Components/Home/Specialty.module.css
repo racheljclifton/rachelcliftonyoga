@@ -1,4 +1,7 @@
 
+.specialtyCard {
+    opacity: .8;
+}
 
 /* large-tablets and computers */
 @media (min-width: 1024px){

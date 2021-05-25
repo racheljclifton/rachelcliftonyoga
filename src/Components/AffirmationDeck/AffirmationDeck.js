@@ -14,10 +14,13 @@ const AffirmationDeck = () => {
   const ctx = useContext(DeckContext);
   const onCreate = ctx.onCreate;
 
+  const delay = (n) => new Promise( r => setTimeout(r, n*1000));
+
   const fetchDeck = useCallback(async () => {
     console.log("fetching deck");
     setIsLoading(true);
     setError(null);
+    await delay(.5);
     try {
       const response = await fetch(
         "https://rachel-clifton-yoga-default-rtdb.firebaseio.com/affirmation-deck.json"

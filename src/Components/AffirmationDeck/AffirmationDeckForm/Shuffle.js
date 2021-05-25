@@ -21,7 +21,7 @@ const Shuffle = (props) => {
   return (
     <form onSubmit={submitShuffleHandler}>
       <label htmlFor="shuffle">
-        How many times would you like to shuffle the deck?
+        How many times would you like to shuffle the deck? (1-10)
       </label>
       <input onChange={setShuffleHandler} id="shuffle" type="number" min="1" max="10" value={shuffleValue} />
       <Button type="submit">Shuffle</Button>

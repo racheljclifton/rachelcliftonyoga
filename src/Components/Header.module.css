@@ -4,10 +4,23 @@
     min-width: 320px;
     height: 100px;
     justify-self: center;
+    margin-top: -10px;
     /* position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%); */
+}
+/* regular phones */
+@media (min-width: 350px){
+    .banner {
+        margin-top: -5px;
+    }
+}
+/* large phones */
+@media (min-width: 400px){
+    .banner{
+        margin-top: 0;
+    }
 }
 
 /*tablets and computers */
@@ -17,7 +30,7 @@
     }
 }
 
-/* tiny phones */
+/*phones */
 /* @media (max-width: 320px) {
     .banner{
         left: 160px;

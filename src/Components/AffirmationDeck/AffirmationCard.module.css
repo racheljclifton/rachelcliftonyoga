@@ -4,6 +4,11 @@
   margin-top: 10px;
   margin-bottom: 0;
   font-kerning: none;
+  font-weight: 400;
+}
+
+.affirmationCard {
+  opacity: .8;
 }
 
 /* screen wider than arbitrary max-width of 500px with 10px margin on each side */

@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useCallback, useContext } from "react";
 import AffirmationDeckCard from "./AffirmationCard";
 import AffirmationDeckForm from "./AffirmationDeckForm/AffirmationDeckForm";
-import DeckContext from '../../store/deck-context';
+import DeckContext from "../../store/deck-context";
 
-import styles from './AffirmationDeck.module.css';
-import logo from '../../../src/logo.svg'; 
+import styles from "./AffirmationDeck.module.css";
+import logo from "../../../src/logo.svg";
 
 const AffirmationDeck = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,13 +14,13 @@ const AffirmationDeck = () => {
   const ctx = useContext(DeckContext);
   const onCreate = ctx.onCreate;
 
-  const delay = (n) => new Promise( r => setTimeout(r, n*1000));
+  const delay = (n) => new Promise((r) => setTimeout(r, n * 1000));
 
   const fetchDeck = useCallback(async () => {
-    console.log("fetching deck");
+    // console.log("fetching deck");
     setIsLoading(true);
     setError(null);
-    await delay(.5);
+    await delay(0.4);
     try {
       const response = await fetch(
         "https://rachel-clifton-yoga-default-rtdb.firebaseio.com/affirmation-deck.json"
@@ -49,35 +49,42 @@ const AffirmationDeck = () => {
   }, [onCreate]);
 
   useEffect(() => {
-    if (display === 'form'){fetchDeck()}}, [fetchDeck, display]);
+    if (display === "form") {
+      fetchDeck();
+    }
+  }, [fetchDeck, display]);
 
-  let displayContent;
+  let content;
   if (display === "form") {
-    displayContent = <AffirmationDeckForm onDraw={setDisplay} />;
+    content = (
+      <>
+        <AffirmationDeckForm onDraw={setDisplay} />
+      </>
+    );
   }
   if (display === "card") {
-    displayContent = (
+    content = (
       <>
         <AffirmationDeckCard onBackToDeck={setDisplay} />
       </>
     );
   }
-
-  let content;
-
-  if (ctx.deck.length > 0) {
-    content = displayContent;
-  }
   if (error) {
     content = <p>{error}</p>;
   }
   if (isLoading) {
-    content = <><img className={styles.loading} src={logo} alt="Spinning lotus"/></>;
+    content = (
+      <>
+        <img className={styles.loading} src={logo} alt="Spinning lotus" />
+      </>
+    );
   }
 
   return (
     <>
-      <h1>Virtual Affirmation Deck</h1>
+      {display === "form" && (
+        <h1 className={styles.title}>Virtual Affirmation Deck</h1>
+      )}
       {content}
     </>
   );

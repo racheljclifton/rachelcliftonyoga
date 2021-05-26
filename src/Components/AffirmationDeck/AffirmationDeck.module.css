@@ -1,7 +1,16 @@
 .loading {
-    animation: rotation 5s infinite linear;
+    animation: rotation 4s infinite linear;
     width: 60vw;
     max-width: 200px;
+    margin-top: -10px;
+}
+
+.title {
+  font-family: "Sacramento", cursive;
+  font-size: 2.7em;
+  font-kerning: none;
+  font-weight: 400;
+
 }
 
 @keyframes rotation {

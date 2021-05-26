@@ -21,9 +21,10 @@ function App() {
     setDisplay(selectedDisplay);
   };
   return (
-    <div className={styles.App}>
+    <>
+      <div className={styles.background}></div>
       <div className={styles.mainCard}>
-        <div className={styles.Layout}>
+        {/* <div className={styles.Layout}> */}
           <header className={styles.Header}>
             <Header className={styles.Banner} />
             <Navigation
@@ -44,8 +45,8 @@ function App() {
             )}
           </main>
         </div>
-      </div>
-    </div>
+      {/* </div> */}
+    </>
   );
 }
 

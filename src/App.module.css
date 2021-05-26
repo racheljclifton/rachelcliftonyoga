@@ -1,32 +1,38 @@
-.App {
+.background {
 
-  text-align: center;
-  min-height: 100vh;
-  /* background-image: url(./Images/grass-background.png); */
-  /* background-attachment: fixed; */
-  /* background-position: center; */
+  height: 102vh;
   background: url(./Images/grass-background.png) no-repeat fixed center;
   background-size: cover;
-  
+  filter: blur(2px);
 
 }
 .mainCard {
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  height: 102vh;
+  overflow: scroll;
+  text-align: center;
+  /* min-height: 100vh; */
   width: 100vw;
   min-width: 320px;
-  padding-bottom: 10px;
-  padding-top: 0;
+  /* padding-bottom: 10px; */
+  /* padding-top: 0; */
   background-color:rgba(255, 255, 255, 0.178);
-}
-.Layout {
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "Header"
     "Main";
   gap: 10px;
-  /* min-height: calc(96vh - 40px); */
 }
+/* .Layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "Header"
+    "Main";
+  gap: 10px;
+} */
 
 .Header {
   grid-area: Header;

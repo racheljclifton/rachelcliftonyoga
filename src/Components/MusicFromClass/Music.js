@@ -34,8 +34,8 @@ const Music = () => {
 
   return (
     <React.Fragment>
-      <h2>Enjoyed the music during class?</h2>
-      <h3>Check out my Spotify playlists:</h3>
+      <h1>Enjoyed the music during class?</h1>
+      <p className={styles.subtitle}>Check out my Spotify playlists:</p>
       <Button value="favorites" onClick={playerHandler} className={player === 'favorites' && 'selected'}>
         Rachel's Favorites
       </Button>

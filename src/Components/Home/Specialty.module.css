@@ -3,6 +3,13 @@
     opacity: .8;
 }
 
+.title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: .92em;
+}
+
+
 /* large-tablets and computers */
 @media (min-width: 1024px){
     .specialtyCard{
@@ -11,9 +18,9 @@
 
         padding: 15px;
     }
-    .title{
+    /* .title{
         margin-bottom: .6em;
         margin-top: 0;
-    }
+    } */
 }
 

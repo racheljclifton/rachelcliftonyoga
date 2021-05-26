@@ -10,6 +10,11 @@
     height: 380px;
 }
 
+.subtitle {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
 .selected {
     color: #008080;
     border-color: #008080;

@@ -83,7 +83,7 @@ const AffirmationDeck = () => {
   return (
     <>
       {display === "form" && (
-        <h1 className={styles.title}>Virtual Affirmation Deck</h1>
+        <h1 className={styles.title}>Affirmation Deck</h1>
       )}
       {content}
     </>

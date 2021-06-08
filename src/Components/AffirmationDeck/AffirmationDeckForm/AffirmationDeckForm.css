@@ -1,17 +1,78 @@
-
-
-label, form > p {
-    display: inline-block;
-    margin: 0 20px 5px 20px;
+.affirmationFormQuestion {
+  display: inline-block;
+  margin: 0 20px 20px 20px;
+  font-size: 1.2em;
 }
 
-select, input {
-    display: block;
-    margin-right: auto;
+select,
+input {
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: #008080;
+  padding: 5px;
+  background: whitesmoke;
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius: 5px;
+}
+
+select:active, input:active, select:hover, input:hover {
+    color: #008080;
+    border-color: #008080;
+    
+}
+
+input[type="radio"] {
+
+  display: inline;
+  margin: 5px;
+}
+
+.affirmationFormContent{
+    min-width: 320px;
+    max-width: 500px;
     margin-left: auto;
+    margin-right: auto;
 }
 
-input[type = radio] {
-    display: inline;
-    margin: 5px;
+.affirmationFormButton {
+    margin-top: 20px;
+}
+
+
+/* non-landscape phones and regular-sized phones and larger */
+@media (min-height: 450px) {
+  .affirmationFormButton,
+  .affirmationFormContent {
+    position: fixed;
+
+  }
+
+  .affirmationFormContent {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .affirmationFormButton {
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+@media (min-height: 568px) {
+    .affirmationFormContent{
+        top: 60%;
+    }
+}
+
+@media (min-height: 600px) {
+    .affirmationFormContent{
+        top: 50%;
+    }
 }

@@ -1,15 +1,53 @@
 .loading {
-    animation: rotation 4s infinite linear;
-    width: 60vw;
-    max-width: 200px;
-    margin-top: -10px;
+  animation: rotation 4s infinite linear;
+  width: 60vw;
+  max-width: 200px;
+  /* margin-top: -10px; */
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto 60vh;
+  grid-template-areas: 
+  "header"
+  "item";
+}
+
+#item {
+  grid-area: item;
+
+}
+
+.flex {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header {
+  grid-area: header;
+}
+
+/* non-landscape phones and regular-sized phones and larger */
+@media (min-height: 450px) {
+  .loading {
+    /* position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); */
+    margin-top: 50px
+  }
+
+}

@@ -27,9 +27,11 @@ const AffirmationDeckCard = (props) => {
         <p>{card.affirmation}</p>
         <h3>{card.mantra}</h3>
       </Card>
-      <Button type="button" onClick={backToDeckHandler}>
-        Back to Deck
-      </Button>
+      <div className={styles.button}>
+        <Button type="button" onClick={backToDeckHandler}>
+          Back to Deck
+        </Button>
+      </div>
     </>
   );
 };

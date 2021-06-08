@@ -21,7 +21,8 @@ const Draw = (props) => {
 
   return (
     <form onSubmit={submitDrawHandler}>
-      <p>
+       <section className='affirmationFormContent'>
+      <p className="affirmationFormQuestion">
         From where in the deck would you like to draw your Affirmation Card?
       </p>
       <div onChange={drawChangeHandler}>
@@ -44,7 +45,10 @@ const Draw = (props) => {
           <label htmlFor="random">Randomly from the Deck</label>
         </div>
       </div>
-      <Button type="submit">Draw Your Card</Button>
+      </section>
+      <section className="affirmationFormButton">
+        <Button type="submit">Draw Your Card</Button>
+      </section>
     </form>
   );
 };

@@ -57,9 +57,9 @@ const AffirmationDeck = () => {
   let content;
   if (display === "form") {
     content = (
-      <>
+      <div id={styles.item}>
         <AffirmationDeckForm onDraw={setDisplay} />
-      </>
+      </div>
     );
   }
   if (display === "card") {
@@ -74,19 +74,21 @@ const AffirmationDeck = () => {
   }
   if (isLoading) {
     content = (
-      <>
+      <div id={styles.item}>
         <img className={styles.loading} src={logo} alt="Spinning lotus" />
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <section className={display === "form" && styles.grid}>
       {display === "form" && (
-        <h1 className={styles.title}>Affirmation Deck</h1>
+        <h1 id={styles.header} className={styles.title}>
+          Affirmation Deck
+        </h1>
       )}
       {content}
-    </>
+    </section>
   );
 };
 

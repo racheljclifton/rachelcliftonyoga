@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import DeckContext from "../../../store/deck-context";
 
-import Button from '../../UI/Button';
+import Button from "../../UI/Button";
 
 const Shuffle = (props) => {
-  const [shuffleValue, setShuffleValue] = useState(1)
+  const [shuffleValue, setShuffleValue] = useState(1);
 
   const ctx = useContext(DeckContext);
 
@@ -17,14 +17,25 @@ const Shuffle = (props) => {
 
   const setShuffleHandler = (event) => {
     setShuffleValue(event.target.value);
-  }
+  };
   return (
     <form onSubmit={submitShuffleHandler}>
-      <label htmlFor="shuffle">
+       <section className='affirmationFormContent'>
+      <label htmlFor="shuffle" className="affirmationFormQuestion">
         How many times would you like to shuffle the deck? (1-10)
       </label>
-      <input onChange={setShuffleHandler} id="shuffle" type="number" min="1" max="10" value={shuffleValue} />
-      <Button type="submit">Shuffle</Button>
+      <input
+        onChange={setShuffleHandler}
+        id="shuffle"
+        type="number"
+        min="1"
+        max="10"
+        value={shuffleValue}
+      />
+      </section>
+      <section className="affirmationFormButton">
+        <Button type="submit">Shuffle</Button>
+      </section>
     </form>
   );
 };

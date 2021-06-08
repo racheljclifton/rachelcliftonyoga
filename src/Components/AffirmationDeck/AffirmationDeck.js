@@ -20,7 +20,7 @@ const AffirmationDeck = () => {
     // console.log("fetching deck");
     setIsLoading(true);
     setError(null);
-    await delay(0.4);
+    await delay(0.2);
     try {
       const response = await fetch(
         "https://rachel-clifton-yoga-default-rtdb.firebaseio.com/affirmation-deck.json"

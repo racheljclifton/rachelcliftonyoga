@@ -3,8 +3,8 @@ import React, { useState } from "react";
 
 import styles from "./App.module.css";
 
-import Header from "./Components/Header";
-import Navigation from "./Components/Navigation";
+import Header from "./Components/Layout/Header";
+import Navigation from "./Components/Layout/Navigation";
 
 import Home from "./Components/Home/Home";
 import Schedule from "./Components/Schedule/Schedule";

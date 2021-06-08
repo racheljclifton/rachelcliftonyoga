@@ -30,6 +30,44 @@ code {
     monospace;
 }
 
+.fade-enter, .card-fade-enter{
+  opacity: 0;
+}
+
+.fade-enter-active{
+  animation: openContent 500ms ease-out forwards;
+}
+
+.card-fade-enter-active{
+  animation: openCard 500ms ease-out forwards;
+}
+
+/* .fade-exit{
+  opacity: 1;
+}
+
+.fade-exit-active{
+  animation: closeContent 0 ease-out forwards;
+} */
+
+@keyframes openContent {
+  0%{opacity: 0;}
+  /* 33%{opacity: 0;} */
+  100%{opacity: 1;}
+}
+
+
+@keyframes openCard {
+  0%{opacity: 0;}
+  /* 33%{opacity: 0;} */
+  100%{opacity: .8;}
+}
+/* @keyframes closeContent {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+} */
+
+
 @media (min-width: 768px){
   h1 {
     margin-block-start: .67em;

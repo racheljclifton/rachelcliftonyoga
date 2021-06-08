@@ -1,10 +1,17 @@
 import React, { useEffect, useState, useCallback, useContext } from "react";
+import CSSTransition from 'react-transition-group/CSSTransition'
+
 import AffirmationDeckCard from "./AffirmationCard";
 import AffirmationDeckForm from "./AffirmationDeckForm/AffirmationDeckForm";
 import DeckContext from "../../store/deck-context";
 
 import styles from "./AffirmationDeck.module.css";
 import logo from "../../../src/logo.svg";
+
+const animationTiming = {
+  enter: 500,
+  exit: 0
+}
 
 const AffirmationDeck = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -54,40 +61,26 @@ const AffirmationDeck = () => {
     }
   }, [fetchDeck, display]);
 
-  let content;
-  if (display === "form") {
-    content = (
-      <div id={styles.item}>
-        <AffirmationDeckForm onDraw={setDisplay} />
-      </div>
-    );
-  }
-  if (display === "card") {
-    content = (
-      <>
-        <AffirmationDeckCard onBackToDeck={setDisplay} />
-      </>
-    );
-  }
-  if (error) {
-    content = <p>{error}</p>;
-  }
-  if (isLoading) {
-    content = (
-      <div id={styles.item}>
-        <img className={styles.loading} src={logo} alt="Spinning lotus" />
-      </div>
-    );
-  }
-
   return (
     <section className={display === "form" && styles.grid}>
-      {display === "form" && (
+      <CSSTransition in={display === "form"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'>
         <h1 id={styles.header} className={styles.title}>
           Affirmation Deck
         </h1>
-      )}
-      {content}
+      </CSSTransition>
+      <CSSTransition in={isLoading} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'>
+        <div id={styles.item}>
+          <img className={styles.loading} src={logo} alt="Spinning lotus" />
+        </div>
+      </CSSTransition>
+      <CSSTransition in={display === "form" && !isLoading} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'>
+        <div id={styles.item}>
+          <AffirmationDeckForm onDraw={setDisplay} />
+        </div>
+      </CSSTransition>
+      <CSSTransition in={display === "card"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='card-fade'>
+        <AffirmationDeckCard onBackToDeck={setDisplay} />
+      </CSSTransition>
     </section>
   );
 };

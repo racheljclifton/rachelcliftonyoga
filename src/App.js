@@ -1,5 +1,5 @@
-// import logo from './logo.svg';
 import React, { useState } from "react";
+import CSSTransition from "react-transition-group/CSSTransition";
 
 import styles from "./App.module.css";
 
@@ -14,6 +14,11 @@ import AffirmationDeck from "./Components/AffirmationDeck/AffirmationDeck";
 
 import { DeckContextProvider } from "./store/deck-context";
 
+const animationTiming = {
+  enter: 500,
+  exit: 0
+}
+
 function App() {
   const [display, setDisplay] = useState("home");
 
@@ -25,26 +30,25 @@ function App() {
       <div className={styles.background}></div>
       <div className={styles.mainCard}>
         {/* <div className={styles.Layout}> */}
-          <header className={styles.Header}>
-            <Header className={styles.Banner} />
-            <Navigation
-              className={styles.Nav}
-              onDisplaySelection={displayHandler}
-              selectedDisplay={display}
-            />
-          </header>
-          <main className={styles.Main}>
-            {display === "home" && <Home />}
-            {display === "schedule" && <Schedule />}
-            {display === "music" && <Music />}
-            {display === "gallery" && <Gallery />}
-            {display === "cards" && (
-              <DeckContextProvider>
-                <AffirmationDeck />
-              </DeckContextProvider>
-            )}
-          </main>
-        </div>
+        <header className={styles.Header}>
+          <Header className={styles.Banner} />
+          <Navigation
+            className={styles.Nav}
+            onDisplaySelection={displayHandler}
+            selectedDisplay={display}
+          />
+        </header>
+        <main className={styles.Main}>
+          <CSSTransition in={display === "home"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Home /></CSSTransition>
+          <CSSTransition in={display === "schedule"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Schedule /></CSSTransition>
+          <CSSTransition in={display === "music"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Music /></CSSTransition>
+          <CSSTransition in={display === "gallery"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Gallery /></CSSTransition>
+          <CSSTransition in={display === "cards"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><DeckContextProvider>
+              <AffirmationDeck />
+            </DeckContextProvider></CSSTransition>
+
+        </main>
+      </div>
       {/* </div> */}
     </>
   );

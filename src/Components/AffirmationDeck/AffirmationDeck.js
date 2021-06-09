@@ -63,7 +63,7 @@ const AffirmationDeck = () => {
   }, [fetchDeck, display]);
 
   return (
-    <section className={display === "form" && styles.grid}>
+    <div className={display === "form" ? styles.grid : styles.cardDisplay}>
       <CSSTransition in={display === "form"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'>
         <h1 id={styles.header} className={styles.title}>
           Affirmation Deck
@@ -82,7 +82,7 @@ const AffirmationDeck = () => {
       <CSSTransition in={display === "card"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='card-fade'>
         <AffirmationDeckCard onBackToDeck={setDisplay} />
       </CSSTransition>
-    </section>
+    </div>
   );
 };
 

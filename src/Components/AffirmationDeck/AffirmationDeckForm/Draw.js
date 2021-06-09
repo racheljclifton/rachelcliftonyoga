@@ -20,8 +20,8 @@ const Draw = (props) => {
   };
 
   return (
-    <form onSubmit={submitDrawHandler}>
-       <section className='affirmationFormContent'>
+    <form className='affirmationForm' onSubmit={submitDrawHandler}>
+       <section id='affirmationFormContent'>
       <p className="affirmationFormQuestion">
         From where in the deck would you like to draw your Affirmation Card?
       </p>
@@ -46,7 +46,7 @@ const Draw = (props) => {
         </div>
       </div>
       </section>
-      <section className="affirmationFormButton">
+      <section id="affirmationFormButton">
         <Button type="submit">Draw Your Card</Button>
       </section>
     </form>

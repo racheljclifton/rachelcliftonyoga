@@ -19,8 +19,8 @@ const Shuffle = (props) => {
     setShuffleValue(event.target.value);
   };
   return (
-    <form onSubmit={submitShuffleHandler}>
-       <section className='affirmationFormContent'>
+    <form className='affirmationForm'  onSubmit={submitShuffleHandler}>
+       <section id='affirmationFormContent'>
       <label htmlFor="shuffle" className="affirmationFormQuestion">
         How many times would you like to shuffle the deck? (1-10)
       </label>
@@ -33,7 +33,7 @@ const Shuffle = (props) => {
         value={shuffleValue}
       />
       </section>
-      <section className="affirmationFormButton">
+      <section id="affirmationFormButton">
         <Button type="submit">Shuffle</Button>
       </section>
     </form>

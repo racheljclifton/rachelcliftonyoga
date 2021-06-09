@@ -19,8 +19,8 @@ const Category = (props) => {
     setSelectValue(event.target.value);
   };
   return (
-    <form onSubmit={submitCategoryHandler}>
-      <section className='affirmationFormContent'>
+    <form className='affirmationForm' onSubmit={submitCategoryHandler}>
+      <section id='affirmationFormContent'>
       <label htmlFor="category" className="affirmationFormQuestion">
         Would you like to pick an Affirmation Card from a deck with a specific
         category in mind?
@@ -38,7 +38,7 @@ const Category = (props) => {
         <option value="positive thinking">Positive Thinking</option>
       </select>
       </section>
-      <section className="affirmationFormButton">
+      <section id="affirmationFormButton">
         <Button type="submit">Select Category</Button>
       </section>
     </form>

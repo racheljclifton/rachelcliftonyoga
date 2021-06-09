@@ -4,40 +4,31 @@
 }
 
 .affirmationCard {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "content"
+    "button";
+}
+.card {
   opacity: 0.8;
+  grid-area: content;
+  align-self: center;
+}
+
+#button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  grid-area: button;
+  align-self: end;
 }
 
 /* screen wider than arbitrary max-width of 500px with 10px margin on each side */
 @media (min-width: 520px) {
-  .affirmationCard {
+  .card {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-
-/* non-landscape phones and regular-sized phones and larger */
-@media (min-height: 450px) {
-  .button,
-  .affirmationCard {
-    position: fixed;
-    left: 0;
-    right: 0;
-  }
-
-  .button {
-    bottom: 50px;
-  }
-
-  .affirmationCard {
-    top: 55%;
-    transform: translateY(-50%);
-  }
-}
-
-@media (min-height: 569px) {
-  .affirmationCard{
-      top: 50%;
   }
 }

@@ -21,18 +21,18 @@ const AffirmationDeckCard = (props) => {
   }
 
   return (
-    <>
-      <Card className={styles.affirmationCard}>
+    <section className={styles.affirmationCard}>
+      <Card className={styles.card}>
         <h2 className={styles.title}>{title}</h2>
         <p>{card.affirmation}</p>
         <h3>{card.mantra}</h3>
       </Card>
-      <div className={styles.button}>
+      <div id={styles.button}>
         <Button type="button" onClick={backToDeckHandler}>
           Back to Deck
         </Button>
       </div>
-    </>
+    </section>
   );
 };
 

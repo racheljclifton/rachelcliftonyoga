@@ -16,10 +16,15 @@
 
 .grid {
   display: grid;
-  grid-template-rows: auto 60vh;
+  grid-template-rows: auto 1fr;
   grid-template-areas: 
   "header"
   "item";
+  height: 100%;
+}
+
+.cardDisplay{
+  height: 100%
 }
 
 #item {

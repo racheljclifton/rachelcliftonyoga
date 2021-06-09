@@ -1,5 +1,4 @@
 .background {
-
   height: 102vh;
   background: url(./Images/grass-background.png) no-repeat fixed center;
   background-size: cover;
@@ -56,6 +55,7 @@
 
 .Main {
   grid-area: Main;
+  height: 100%;
 }
 
 /*tablets and computers */

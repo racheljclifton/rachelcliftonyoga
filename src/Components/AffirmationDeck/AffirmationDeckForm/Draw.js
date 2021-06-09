@@ -26,7 +26,7 @@ const Draw = (props) => {
         From where in the deck would you like to draw your Affirmation Card?
       </p>
       <div onChange={drawChangeHandler}>
-        <div>
+        <div className='drawOption'>
           <input
             defaultChecked
             type="radio"
@@ -36,11 +36,11 @@ const Draw = (props) => {
           />
           <label htmlFor="top">Top of the Deck</label>
         </div>
-        <div>
+        <div className='drawOption'>
           <input type="radio" id="bottom" name="drawPlace" value="bottom" />
           <label htmlFor="bottom">Bottom of the Deck</label>
         </div>
-        <div>
+        <div className='drawOption'>
           <input type="radio" id="random" name="drawPlace" value="random" />
           <label htmlFor="random">Randomly from the Deck</label>
         </div>

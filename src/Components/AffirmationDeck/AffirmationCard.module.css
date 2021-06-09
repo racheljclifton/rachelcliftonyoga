@@ -10,6 +10,7 @@
   grid-template-areas:
     "content"
     "button";
+    font-size: 1.2em;
 }
 .card {
   opacity: 0.8;
@@ -22,6 +23,7 @@
   margin-bottom: 50px;
   grid-area: button;
   align-self: end;
+  font-size: 1.2em;
 }
 
 /* screen wider than arbitrary max-width of 500px with 10px margin on each side */

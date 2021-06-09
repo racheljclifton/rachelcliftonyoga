@@ -12,6 +12,10 @@
     height: 380px;
 }
 
+.playerPadding {
+    padding-bottom: 10px;
+}
+
 .subtitle {
     font-weight: 300;
     font-size: 1.2em;

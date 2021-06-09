@@ -48,7 +48,7 @@ const Music = () => {
       <Button value="stress" onClick={playerHandler} className={player === 'stress' && 'selected'}>
         Yoga for Stress Playlist
       </Button>
-
+<div className={styles.playerPadding}>
         <Card className={styles.playerCard}>
           <iframe
             title="musicPlayer"
@@ -59,6 +59,7 @@ const Music = () => {
             allow="encrypted-media"
           ></iframe>
         </Card>
+        </div>
     </React.Fragment>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styles from "./Navigation.module.css";
 import Button from "../UI/Button";
@@ -11,41 +12,21 @@ const Navigation = (props) => {
   };
   return (
     <nav className={styles.navBar}>
-      <Button
-        value="home"
-        onClick={displaySelectionHandler}
-        className={props.selectedDisplay === "home" && "selected"}
-      >
-        Home
-      </Button>
-      <Button
-        value="schedule"
-        onClick={displaySelectionHandler}
-        className={props.selectedDisplay === "schedule" && "selected"}
-      >
-        Schedule
-      </Button>
-      <Button
-        value="music"
-        onClick={displaySelectionHandler}
-        className={props.selectedDisplay === "music" && "selected"}
-      >
-        Music
-      </Button>
-      <Button
-        value="gallery"
-        onClick={displaySelectionHandler}
-        className={props.selectedDisplay === "gallery" && "selected"}
-      >
-        Pictures
-      </Button>
-      <Button
-        value="cards"
-        onClick={displaySelectionHandler}
-        className={props.selectedDisplay === "cards" && "selected"}
-      >
-        Affirmation Deck
-      </Button>
+      <NavLink activeClassName={styles.selected} to="/" exact>
+        <Button value="home">Home</Button>
+      </NavLink>
+      <NavLink activeClassName={styles.selected} to="/schedule">
+        <Button value="schedule">Schedule</Button>
+      </NavLink>
+      <NavLink activeClassName={styles.selected} to="/music">
+        <Button value="music">Music</Button>
+      </NavLink>
+      <NavLink activeClassName={styles.selected} to="/pictures">
+        <Button value="gallery">Pictures</Button>
+      </NavLink>
+      <NavLink activeClassName={styles.selected} to="/affirmation-deck">
+        <Button value="cards">Affirmation Deck</Button>
+      </NavLink>
       <section>
         <Facebook className={styles.socialLink} />
         <Instagram className={styles.socialLink} />

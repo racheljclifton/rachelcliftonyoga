@@ -18,6 +18,12 @@
     justify-self: center;
 }
 
+.selected button {
+    color: #008080;
+    border-color: #008080;
+    background: whitesmoke;
+  }
+
 /*tablets and computers */
 /* @media (min-width: 768px) {
     .navBar{

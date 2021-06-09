@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import CSSTransition from "react-transition-group/CSSTransition";
+import { Route } from "react-router-dom";
+import { AnimatedSwitch } from "react-router-transition";
 
 import styles from "./App.module.css";
 
@@ -13,11 +14,6 @@ import Gallery from "./Components/Gallery/Gallery";
 import AffirmationDeck from "./Components/AffirmationDeck/AffirmationDeck";
 
 import { DeckContextProvider } from "./store/deck-context";
-
-const animationTiming = {
-  enter: 500,
-  exit: 0
-}
 
 function App() {
   const [display, setDisplay] = useState("home");
@@ -39,14 +35,31 @@ function App() {
           />
         </header>
         <main className={styles.Main}>
-          <CSSTransition in={display === "home"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Home /></CSSTransition>
-          <CSSTransition in={display === "schedule"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Schedule /></CSSTransition>
-          <CSSTransition in={display === "music"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Music /></CSSTransition>
-          <CSSTransition in={display === "gallery"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><Gallery /></CSSTransition>
-          <CSSTransition in={display === "cards"} timeout={animationTiming} mountOnEnter unmountOnExit classNames='fade'><DeckContextProvider>
-              <AffirmationDeck />
-            </DeckContextProvider></CSSTransition>
 
+            <AnimatedSwitch
+              atEnter={{ opacity: 0 }}
+              atLeave={{ opacity: 0 }}
+              atActive={{ opacity: 1 }}
+              className="switch-wrapper"
+            >
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/schedule">
+                <Schedule />
+              </Route>
+              <Route path="/music">
+                <Music />
+              </Route>
+              <Route path="/pictures">
+                <Gallery />
+              </Route>
+              <Route path="/affirmation-deck">
+                <DeckContextProvider>
+                  <AffirmationDeck />
+                </DeckContextProvider>
+              </Route>
+            </AnimatedSwitch>
         </main>
       </div>
       {/* </div> */}

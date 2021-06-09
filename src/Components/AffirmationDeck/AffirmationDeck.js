@@ -51,9 +51,10 @@ const AffirmationDeck = () => {
       onCreate(transformedDeck);
     } catch (newError) {
       setError(newError.message);
+      console.log(error)
     }
     setIsLoading(false);
-  }, [onCreate]);
+  }, [onCreate, error]);
 
   useEffect(() => {
     if (display === "form") {

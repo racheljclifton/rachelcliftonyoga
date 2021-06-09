@@ -7,9 +7,7 @@ import Facebook from "../SocialMedia/Facebook";
 import Instagram from "../SocialMedia/Instagram";
 
 const Navigation = (props) => {
-  const displaySelectionHandler = (event) => {
-    props.onDisplaySelection(event.target.value);
-  };
+
   return (
     <nav className={styles.navBar}>
       <NavLink activeClassName={styles.selected} to="/" exact>

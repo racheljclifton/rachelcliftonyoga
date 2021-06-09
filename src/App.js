@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import { AnimatedSwitch } from "react-router-transition";
 
@@ -16,11 +16,7 @@ import AffirmationDeck from "./Components/AffirmationDeck/AffirmationDeck";
 import { DeckContextProvider } from "./store/deck-context";
 
 function App() {
-  const [display, setDisplay] = useState("home");
 
-  const displayHandler = (selectedDisplay) => {
-    setDisplay(selectedDisplay);
-  };
   return (
     <>
       <div className={styles.background}></div>
@@ -30,8 +26,6 @@ function App() {
           <Header className={styles.Banner} />
           <Navigation
             className={styles.Nav}
-            onDisplaySelection={displayHandler}
-            selectedDisplay={display}
           />
         </header>
         <main className={styles.Main}>

@@ -34,32 +34,41 @@ code {
     monospace;
 }
 
+/* global transitions and animations */
+
 .fade-enter,
 .card-fade-enter {
   opacity: 0;
 }
 
 .fade-enter-active {
-  animation: openContent 500ms ease-out forwards;
+  animation: openContent 1500ms ease-out forwards;
 }
 
 .card-fade-enter-active {
-  animation: openCard 500ms ease-out forwards;
+  animation: openCard 1500ms ease-out forwards;
 }
 
-/* .fade-exit{
-  opacity: 1;
+.fade-exit {
+  opacity: 0;
+}
+/*
+.card-fade-exit {
+  opacity: .8;
 }
 
-.fade-exit-active{
-  animation: closeContent 0 ease-out forwards;
+.fade-exit-active {
+  animation: closeContent 1000ms ease-out forwards;
+}
+
+.fade-card-exit-active {
+  animation: closeCard 1000ms ease-out forwards;
 } */
 
 @keyframes openContent {
   0% {
     opacity: 0;
   }
-  /* 33%{opacity: 0;} */
   100% {
     opacity: 1;
   }
@@ -69,14 +78,40 @@ code {
   0% {
     opacity: 0;
   }
-  /* 33%{opacity: 0;} */
   100% {
-    opacity: 0.8;
+    opacity: 1;
   }
 }
+
+.flip-card-appear-active {
+  animation: flipCard 1000ms ease-out none;
+}
+
+@keyframes flipCard {
+  0% {
+    transform: rotate3d(.2, -1, -.2, -0.2turn);
+  }
+  100% {
+    transform: rotate3d(0);
+  }
+}
+
 /* @keyframes closeContent {
-  0%{opacity: 1;}
-  100%{opacity: 0;}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes closeCard {
+  0% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 0;
+  }
 } */
 
 .switch-wrapper {
@@ -90,6 +125,7 @@ code {
   height: 100%;
 }
 
+/* global responsive formatting */
 @media (min-width: 768px) {
   h1 {
     margin-block-start: 0.67em;

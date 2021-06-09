@@ -6,7 +6,7 @@ import Shuffle from './Shuffle';
 import Draw from './Draw';
 
 const animationTiming = {
-    enter: 500,
+    enter: 1500,
     exit: 0
   }
 

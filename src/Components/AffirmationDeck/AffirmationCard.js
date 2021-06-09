@@ -5,6 +5,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 
 import styles from "./AffirmationCard.module.css";
+import { CSSTransition } from "react-transition-group";
 
 const AffirmationDeckCard = (props) => {
   const ctx = useContext(DeckContext);
@@ -22,11 +23,15 @@ const AffirmationDeckCard = (props) => {
 
   return (
     <section className={styles.affirmationCard}>
-      <Card className={styles.card}>
-        <h2 className={styles.title}>{title}</h2>
-        <p>{card.affirmation}</p>
-        <h3>{card.mantra}</h3>
-      </Card>
+      <CSSTransition in appear timeout={1000} classNames="flip-card">
+
+          <Card className={styles.card}>
+            <h2 className={styles.title}>{title}</h2>
+            <p>{card.affirmation}</p>
+            <h3>{card.mantra}</h3>
+          </Card>
+
+      </CSSTransition>
       <div id={styles.button}>
         <Button type="button" onClick={backToDeckHandler}>
           Back to Deck

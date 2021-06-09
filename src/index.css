@@ -1,44 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
 }
 
-h1, h2{
+h1,
+h2 {
   font-family: "Sacramento", cursive;
   font-size: 2.7em;
   font-kerning: none;
   font-weight: 400;
-  margin-block-start: .33em;
+  margin-block-start: 0.33em;
   line-height: 1em;
 }
 
-
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.fade-enter, .card-fade-enter{
+.fade-enter,
+.card-fade-enter {
   opacity: 0;
 }
 
-.fade-enter-active{
+.fade-enter-active {
   animation: openContent 500ms ease-out forwards;
 }
 
-.card-fade-enter-active{
+.card-fade-enter-active {
   animation: openCard 500ms ease-out forwards;
 }
 
@@ -51,16 +56,23 @@ code {
 } */
 
 @keyframes openContent {
-  0%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
   /* 33%{opacity: 0;} */
-  100%{opacity: 1;}
+  100% {
+    opacity: 1;
+  }
 }
 
-
 @keyframes openCard {
-  0%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
   /* 33%{opacity: 0;} */
-  100%{opacity: .8;}
+  100% {
+    opacity: 0.8;
+  }
 }
 /* @keyframes closeContent {
   0%{opacity: 1;}
@@ -69,16 +81,17 @@ code {
 
 .switch-wrapper {
   position: relative;
+  height: 100%;
 }
 
 .switch-wrapper > div {
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   h1 {
-    margin-block-start: .67em;
+    margin-block-start: 0.67em;
   }
 }
-

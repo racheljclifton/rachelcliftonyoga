@@ -2,27 +2,33 @@ import React from "react";
 
 import styles from "./Schedule.module.css";
 
-import scheduleImage from "../../Images/schedule.png";
-
+import scheduleImage from "../../Images/schedule_pic.JPG";
 
 const Schedule = () => {
   const honorYogaLink =
     "https://www.honoryoga.com/harperspoint/classes/#schedule";
   return (
-    <React.Fragment>
-      <img
-        className={styles.schedule}
-        src={scheduleImage}
-        alt="Roots at 11:30am on Saturdays at Honor Yoga"
-      />
-      <p>
+    <section className={styles.schedulePage}>
+      <h1 id={styles.header}>Class Schedule</h1>
+      <section className={styles.schedule} id={styles.main}>
+        <img
+          className={styles.pic}
+          src={scheduleImage}
+          alt="Rachel in triangle pose"
+          id={styles.pic}
+        />
+        <h2 id={styles.class}>Roots</h2>
+        <h3 id={styles.date}>Saturdays 11:00am</h3>
+        <p id={styles.locastion}>Honor Yoga Harper's Point</p>
+      </section>
+      <section id={styles.footer}>
         Visit{" "}
         <a href={honorYogaLink} target="_blank" rel="noreferrer">
           Honor Yoga Harper's Point
         </a>{" "}
         for more details and to book your class!
-      </p>
-    </React.Fragment>
+      </section>
+    </section>
   );
 };
 

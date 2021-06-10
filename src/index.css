@@ -41,6 +41,10 @@ code {
   opacity: 0;
 }
 
+.fade-exit {
+  display: none;
+}
+
 .fade-enter-active {
   animation: openContent 1500ms ease-out forwards;
 }

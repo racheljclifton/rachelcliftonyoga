@@ -45,26 +45,6 @@ code {
   animation: openContent 1500ms ease-out forwards;
 }
 
-.card-fade-enter-active {
-  animation: openCard 1500ms ease-out forwards;
-}
-
-.fade-exit {
-  opacity: 0;
-}
-/*
-.card-fade-exit {
-  opacity: .8;
-}
-
-.fade-exit-active {
-  animation: closeContent 1000ms ease-out forwards;
-}
-
-.fade-card-exit-active {
-  animation: closeCard 1000ms ease-out forwards;
-} */
-
 @keyframes openContent {
   0% {
     opacity: 0;
@@ -73,6 +53,11 @@ code {
     opacity: 1;
   }
 }
+
+.card-fade-enter-active {
+  animation: openCard 1500ms ease-out forwards;
+}
+
 
 @keyframes openCard {
   0% {
@@ -89,30 +74,12 @@ code {
 
 @keyframes flipCard {
   0% {
-    transform: rotate3d(.2, -1, -.2, -0.2turn);
+    transform: rotate3d(.2, -1, -.2, -72deg);
   }
   100% {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0, 0deg);;
   }
 }
-
-/* @keyframes closeContent {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes closeCard {
-  0% {
-    opacity: .8;
-  }
-  100% {
-    opacity: 0;
-  }
-} */
 
 .switch-wrapper {
   position: relative;

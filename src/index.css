@@ -39,13 +39,15 @@ code {
 .fade-enter,
 .card-fade-enter {
   opacity: 0;
+  display: none;
 }
 
-.fade-exit {
+.fade-exit, .fade-exit-active {
   display: none;
 }
 
 .fade-enter-active {
+  display: block;
   animation: openContent 1500ms ease-out forwards;
 }
 
@@ -59,6 +61,7 @@ code {
 }
 
 .card-fade-enter-active {
+  display: block;
   animation: openCard 1500ms ease-out forwards;
 }
 

@@ -16,7 +16,7 @@ const SPECIALTY_LIST = [
     title: "Yoga",
     description: "200RYT Specializing in Hatha Yoga and Beginner Yoga",
     details:
-      "My beginner class (called Roots) focuses on the fundamentals and create a strong foundation for your practice. Perfect for beginners or those who have been away from their practice for some time, I teach these classes with precise cues and the use of props. I also teach Gentle and Yin yoga and a specialty Yoga for Stress class.",
+      "My beginner classes focus on the fundamentals and create a strong foundation for your practice. Perfect for beginners or those who have been away from their practice for some time, I teach these classes with precise cues and the use of props. I also teach Gentle and Yin yoga and a specialty Yoga for Stress class.",
   },
   {
     id: "aerial",
